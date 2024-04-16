@@ -45,7 +45,7 @@ final class ValidationBootloader extends Bootloader
         FactoryInterface $factory
     ): SymfonyValidator {
         $validator = \Symfony\Component\Validator\Validation::createValidatorBuilder()
-            ->enableAnnotationMapping()
+            ->enableAttributeMapping()
             ->setConstraintValidatorFactory($constraintValidatorFactory);
 
         if ($container->has(TranslatorInterface::class)) {

@@ -25,9 +25,11 @@ final class NodeVisitor implements VisitorInterface
 
                 return $c;
             }
+
+            return $node;
         }
 
-        return $node;
+        return null;
     }
 
     public function leaveNode(mixed $node, VisitorContext $ctx): mixed
